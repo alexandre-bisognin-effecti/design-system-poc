@@ -1,0 +1,13 @@
+{
+  "name": "design-system-poc",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:docs": "npm run dev -w docs",
+    "build": "npm run build -ws",
+    "dev": "npm run dev -ws"
+  }
+}
