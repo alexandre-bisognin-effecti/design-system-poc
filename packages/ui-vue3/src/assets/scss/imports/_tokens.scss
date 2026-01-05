@@ -1,0 +1,21 @@
+//** Variáveis **//
+
+// Cores
+@import '../variables/_colors.scss';
+
+// Tamanhos e espaçamentos
+@import '../variables/_sizes.scss';
+
+//** Mixins **//
+
+// Pesos de fonte
+@import '../mixins/fonts.scss';
+
+// Alinhamentos
+@import '../mixins/align.scss';
+
+// Estilos de título, subtítulo e parágrafo + Efeitos para texto
+@import '../mixins/text.scss';
+
+// Efeitos (Drop Shadow, Background Blur, etc)
+@import '../mixins/effects.scss';

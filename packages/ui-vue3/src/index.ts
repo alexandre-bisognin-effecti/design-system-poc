@@ -1,4 +1,4 @@
-import MeButton from './components/MeButton.vue'
+import MeButton from './components/me-button/MeButton.vue'
 
 export { MeButton }
 

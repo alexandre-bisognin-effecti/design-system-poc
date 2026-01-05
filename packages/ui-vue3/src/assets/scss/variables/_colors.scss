@@ -1,0 +1,217 @@
+@import '../oldtokens/colors';
+
+//** DESIGN SYSTEM COLORS **//
+:root {
+  /* NEUTRAL COLORS */
+  --neutral-white: #ffffff;
+  --neutral-pure: #f6f6fa;
+  --neutral-soft: #f0f2f9;
+  --neutral-pale: #dce0f1;
+  --neutral-light: #c8cce6;
+  --neutral-default: #bbc0cb;
+  --neutral-deep: #69728b;
+  --neutral-dark: #343d52;
+  --neutral-darkest: #081128;
+
+  /* BLUE COLORS */
+  --blue-primary: #121d59;
+  --blue-secondary: #384483;
+  --blue-tertiary: #636da9;
+  --blue-quaternary: #939dca;
+  --blue-quinary: #c8cce6;
+  --blue-senary: #f0f2f9;
+
+  /* OCEAN COLORS */
+  --ocean-primary: #1ec7d9;
+  --ocean-secondary: #79e4f0;
+  --ocean-tertiary: #0b8f9e;
+  --ocean-quaternary: #aaebf2;
+  --ocean-quinary: #aaebf2;
+  --ocean-senary: #ddf7f9;
+
+  /* BEIGE COLORS */
+  --beige-primary: #cdbc88;
+  --beige-secondary: #d8cba4;
+  --beige-tertiary: #a79662;
+  --beige-quaternary: #ede4c8;
+  --beige-quinary: #f1ede1;
+  --beige-senary: #f8f6f0;
+
+  /* RED COLORS */
+  --red-primary: #950928;
+  --red-secondary: #db0836;
+  --red-tertiary: #5d0418;
+  --red-quaternary: #fd2655;
+  --red-quinary: #fcafc0;
+  --red-senary: #ffdce3;
+
+  /* ORANGE COLORS */
+  --orange-primary: #ca3500;
+  --orange-secondary: #f54900;
+  --orange-tertiary: #7e2a0c;
+  --orange-quaternary: #ff6900;
+  --orange-quinary: #ffb86a;
+  --orange-senary: #ffede0;
+
+  /* GREEN COLORS */
+  --green-primary: #0a5c23;
+  --green-secondary: #0c8c32;
+  --green-tertiary: #0b3817;
+  --green-quaternary: #18bf4a;
+  --green-quinary: #87eca5;
+  --green-senary: #dbfde5;
+
+  /* YELLOW COLORS */
+  --yellow-primary: #e4ce00;
+  --yellow-secondary: #fce300;
+  --yellow-tertiary: #b09f00;
+  --yellow-quaternary: #fdeb40;
+  --yellow-quinary: #fef180;
+  --yellow-senary: #fffce0;
+
+  /* PINK COLORS */
+  --pink-primary: #ff89a3;
+  --pink-secondary: #fcafc0;
+  --pink-tertiary: #dd4b6b;
+  --pink-quaternary: #fdd3d0;
+  --pink-quinary: #fed7e0;
+  --pink-senary: #fff0f5;
+
+  /* PURPLE COLORS */
+  --purple-primary: #504299;
+  --purple-secondary: #856dff;
+  --purple-tertiary: #28214c;
+  --purple-quaternary: #aab1ff;
+  --purple-quinary: #cec5ff;
+  --purple-senary: #f6f3ff;
+
+  /* MUSTARD COLORS */
+  --mustard-primary: #f0ad00;
+  --mustard-secondary: #ffc700;
+  --mustard-tertiary: #997700;
+  --mustard-quaternary: #ffd580;
+  --mustard-quinary: #ffe380;
+  --mustard-senary: #fff4d9;
+
+  /* BACKGROUND COLORS */
+  --bg-primary: var(--neutral-white);
+  --bg-secondary: var(--neutral-soft);
+  --bg-tertiary: var(--neutral-pale);
+  --bg-quaternary: var(--neutral-pure);
+
+  /* TEXT COLORS */
+  --text-primary: var(--neutral-darkest);
+  --text-secondary: var(--neutral-dark);
+  --text-tertiary: var(--neutral-deep);
+  --text-quaternary: var(--neutral-default);
+  --text-white: var(--neutral-white);
+}
+
+// ============================================
+// SASS VARIABLES
+// ============================================
+$neutral-white: var(--neutral-white);
+$neutral-pure: var(--neutral-pure);
+$neutral-soft: var(--neutral-soft);
+$neutral-pale: var(--neutral-pale);
+$neutral-light: var(--neutral-light);
+$neutral-default: var(--neutral-default);
+$neutral-deep: var(--neutral-deep);
+$neutral-dark: var(--neutral-dark);
+$neutral-darkest: var(--neutral-darkest);
+
+/* BLUE COLORS */
+$blue-primary: var(--blue-primary);
+$blue-secondary: var(--blue-secondary);
+$blue-tertiary: var(--blue-tertiary);
+$blue-quaternary: var(--blue-quaternary);
+$blue-quinary: var(--blue-quinary);
+$blue-senary: var(--blue-senary);
+
+/* OCEAN COLORS */
+$ocean-primary: var(--ocean-primary);
+$ocean-secondary: var(--ocean-secondary);
+$ocean-tertiary: var(--ocean-tertiary);
+$ocean-quaternary: var(--ocean-quaternary);
+$ocean-quinary: var(--ocean-quinary);
+$ocean-senary: var(--ocean-senary);
+
+/* BEIGE COLORS */
+$beige-primary: var(--beige-primary);
+$beige-secondary: var(--beige-secondary);
+$beige-tertiary: var(--beige-tertiary);
+$beige-quaternary: var(--beige-quaternary);
+$beige-quinary: var(--beige-quinary);
+$beige-senary: var(--beige-senary);
+
+/* RED COLORS */
+$red-primary: var(--red-primary);
+$red-secondary: var(--red-secondary);
+$red-tertiary: var(--red-tertiary);
+$red-quaternary: var(--red-quaternary);
+$red-quinary: var(--red-quinary);
+$red-senary: var(--red-senary);
+
+/* ORANGE COLORS */
+$orange-primary: var(--orange-primary);
+$orange-secondary: var(--orange-secondary);
+$orange-tertiary: var(--orange-tertiary);
+$orange-quaternary: var(--orange-quaternary);
+$orange-quinary: var(--orange-quinary);
+$orange-senary: var(--orange-senary);
+
+/* GREEN COLORS */
+$green-primary: var(--green-primary);
+$green-secondary: var(--green-secondary);
+$green-tertiary: var(--green-tertiary);
+$green-quaternary: var(--green-quaternary);
+$green-quinary: var(--green-quinary);
+$green-senary: var(--green-senary);
+
+/* YELLOW COLORS */
+$yellow-primary: var(--yellow-primary);
+$yellow-secondary: var(--yellow-secondary);
+$yellow-tertiary: var(--yellow-tertiary);
+$yellow-quaternary: var(--yellow-quaternary);
+$yellow-quinary: var(--yellow-quinary);
+$yellow-senary: var(--yellow-senary);
+
+/* PINK COLORS */
+$pink-primary: var(--pink-primary);
+$pink-secondary: var(--pink-secondary);
+$pink-tertiary: var(--pink-tertiary);
+$pink-quaternary: var(--pink-quaternary);
+$pink-quinary: var(--pink-quinary);
+$pink-senary: var(--pink-senary);
+
+/* PURPLE COLORS */
+$purple-primary: var(--purple-primary);
+$purple-secondary: var(--purple-secondary);
+$purple-tertiary: var(--purple-tertiary);
+$purple-quaternary: var(--purple-quaternary);
+$purple-quinary: var(--purple-quinary);
+$purple-senary: var(--purple-senary);
+
+/* MUSTARD COLORS */
+$mustard-primary: var(--mustard-primary);
+$mustard-secondary: var(--mustard-secondary);
+$mustard-tertiary: var(--mustard-tertiary);
+$mustard-quaternary: var(--mustard-quaternary);
+$mustard-quinary: var(--mustard-quinary);
+$mustard-senary: var(--mustard-senary);
+
+/* BACKGROUND COLORS */
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-tertiary: var(--bg-tertiary);
+$bg-quaternary: var(--bg-quaternary);
+
+/* TEXT COLORS */
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-tertiary: var(--text-tertiary);
+$text-disable: var(--text-disable);
+$text-white: var(--text-white);
+
+
+

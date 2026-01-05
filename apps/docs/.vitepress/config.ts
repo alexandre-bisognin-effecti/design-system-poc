@@ -24,14 +24,14 @@ export default defineConfig({
           text: 'Development',
           collapsed: false,
           items: [
-            { text: 'Quick Start', link: '/components/Development/quick-start' }
+            { text: 'Quick Start', link: '/components/development/quick-start' }
           ]
         },
         {
           text: 'Básicos',
           collapsed: false,
           items: [
-            { text: 'Button', link: '/components/button' },
+            { text: 'Button', link: '/components/me-button/me-button' },
             { text: 'Input', link: '/components/input' },
             { text: 'Checkbox', link: '/components/checkbox' }
           ]

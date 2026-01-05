@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { MeButton } from '@me/ui-vue3'
-import ButtonPlayground from '../../components/MeButton/ButtonPlayground.vue'
-import '@me/ui-vue3/dist/style.css'
+import ButtonPlayground from '../../components/me-button/ButtonPlayground.vue'
+import '../../../../packages/ui-vue3/dist/style.css'
 import './custom.css' 
 
 export default {

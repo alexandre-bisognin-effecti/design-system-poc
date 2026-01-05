@@ -15,7 +15,8 @@ export default defineConfig({
       output: {
         globals: {
           vue: 'Vue'
-        }
+        },
+        assetFileNames: 'style.css'
       }
     }
   }

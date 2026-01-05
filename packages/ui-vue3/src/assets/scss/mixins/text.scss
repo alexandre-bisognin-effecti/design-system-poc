@@ -1,0 +1,111 @@
+@import "../variables/_colors.scss";
+@import "../mixins/fonts.scss";
+
+@mixin text-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin title-lg {
+	font-size: 48px;
+	line-height: 100%;
+	color: $text-primary;
+	cursor: default;
+	font-weight: 700;
+}
+
+@mixin title-md {
+	font-size: 32px;
+	line-height: 100%;
+	color: $text-primary;
+	cursor: default;
+	font-weight: 700;
+}
+
+@mixin title-sm {
+	font-size: 24px;
+	line-height: 100%;
+	color: $text-primary;
+	cursor: default;
+	font-weight: 700;
+}
+
+@mixin title-xs {
+	font-size: 20px;
+	line-height: 100%;
+	color: $text-primary;
+	cursor: default;
+	font-weight: 700;
+}
+
+@mixin title-xxs {
+	font-size: 16px;
+	line-height: 100%;
+	color: $text-primary;
+	cursor: default;
+	font-weight: 700;
+}
+
+@mixin subtitle-xl {
+	font-size: 24px;
+	line-height: 100%;
+	color: $text-primary;
+	font-weight: 600;
+}
+
+@mixin subtitle-lg {
+	font-size: 20px;
+	line-height: 100%;
+	color: $text-primary;
+	font-weight: 600;
+}
+
+@mixin subtitle-md {
+	font-size: 16px;
+	line-height: 100%;
+	color: $text-primary;
+	font-weight: 600;
+}
+
+@mixin subtitle-sm {
+	font-size: 14px;
+	line-height: 100%;
+	color: $text-primary;
+	font-weight: 600;
+}
+
+@mixin subtitle-xs {
+	font-size: 12px;
+	line-height: 100%;
+	color: $text-primary;
+	font-weight: 700;
+}
+
+@mixin body-lg {
+	font-size: 20px;
+	line-height: 120%;
+	color: $text-secondary;
+	font-weight: 400;
+}
+
+@mixin body-md {
+	font-size: 16px;
+	line-height: 120%;
+	color: $text-secondary;
+	font-weight: 400;
+}
+
+@mixin body-sm {
+	font-size: 14px;
+	line-height: 120%;
+	color: $text-secondary;
+	font-weight: 400;
+}
+
+@mixin body-xs {
+	font-size: 12px;
+	line-height: 120%;
+	color: $text-secondary;
+	font-weight: 400;
+}

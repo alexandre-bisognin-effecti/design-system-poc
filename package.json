@@ -9,5 +9,13 @@
     "dev:docs": "npm run dev -w docs",
     "build": "npm run build -ws",
     "dev": "npm run dev -ws"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/ui-vue3.es.js",
+      "require": "./dist/ui-vue3.umd.js",
+      "types": "./src/index.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
   }
 }
