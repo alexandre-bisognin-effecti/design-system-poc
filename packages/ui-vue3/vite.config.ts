@@ -19,5 +19,8 @@ export default defineConfig({
         assetFileNames: 'style.css'
       }
     }
+  },
+  server: {
+    port: 5173,
   }
 })

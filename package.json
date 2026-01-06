@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "dev:docs": "npm run dev -w docs",
+    "dev:ui": "npm run dev -w @me/ui-vue3",
+    "build:ui": "npm run build -w @me/ui-vue3",
     "build": "npm run build -ws",
     "dev": "npm run dev -ws"
   },

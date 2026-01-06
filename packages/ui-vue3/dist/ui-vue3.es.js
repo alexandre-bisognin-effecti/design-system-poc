@@ -92,12 +92,12 @@ const p = d({
       return !!this.icon && this.custom && !this.active && !this.activePink && !this.activeYellow;
     }
   }
-}), y = (t, s) => {
+}), b = (t, s) => {
   const l = t.__vccOpts || t;
   for (const [c, r] of s)
     l[c] = r;
   return l;
-}, b = ["disabled", "title"], m = {
+}, y = ["disabled", "title"], m = {
   key: 0,
   class: "material-icons-outlined base-btn-icon"
 }, f = {
@@ -110,12 +110,12 @@ const p = d({
   key: 5,
   class: "me-button__notification-dot"
 };
-function C(t, s, l, c, r, S) {
+function C(t, s, l, c, r, B) {
   return o(), e("button", {
-    class: h(["base-btn", t.buttonClasses, `me-button-icon-${t.iconPosition}`]),
+    class: h([["base-btn", t.buttonClasses, `me-button-icon-${t.iconPosition}`], "!bg-green-500"]),
     style: u(t.buttonStyles),
     disabled: t.disabled,
-    onClick: s[0] || (s[0] = (I) => t.$emit("click")),
+    onClick: s[0] || (s[0] = (S) => t.$emit("click")),
     title: t.tooltipText
   }, [
     t.showIcon || t.showActiveIconOutlined ? (o(), e("span", m, n(t.icon), 1)) : i("", !0),
@@ -131,12 +131,12 @@ function C(t, s, l, c, r, S) {
       class: "base-btn-label"
     }, void 0, !0),
     t.notificationDot ? (o(), e("span", w)) : i("", !0)
-  ], 14, b);
+  ], 14, y);
 }
-const B = /* @__PURE__ */ y(p, [["render", C], ["__scopeId", "data-v-1b4cf04e"]]), P = {
-  MeButton: B
+const g = /* @__PURE__ */ b(p, [["render", C], ["__scopeId", "data-v-9b7756f9"]]), P = {
+  MeButton: g
 };
 export {
-  B as MeButton,
+  g as MeButton,
   P as default
 };
