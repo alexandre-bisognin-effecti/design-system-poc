@@ -1,101 +1,157 @@
-<script setup lang="ts">
+<script lang="ts">
 /**
  * @component MeButton
  * @description Botão com suporte a variantes, ícones e estados
  */
-import { computed } from 'vue'
+import { defineComponent, computed, PropType } from 'vue'
 import { ButtonVariant } from '../../utils/enums/Enums'
 
-// Types
 export interface MeButtonProps {
-  /** Texto do botão */
   label?: string
-  /** Nome do ícone Material Icons */
   icon?: string
-  /** Estado desabilitado */
   disabled?: boolean
-  /** Cor do ícone (modo custom) */
   iconColor?: string
-  /** Cor da borda (modo custom) */
   borderColor?: string
-  /** Cor do texto (modo custom) */
   labelColor?: string
-  /** Variante de cor */
   variant?: `${ButtonVariant}`
-  /** Estilo outlined (borda) */
   outlined?: boolean
-  /** Estilo flat (sem borda/fundo) */
   flat?: boolean
-  /** Estilo customizado */
   custom?: boolean
-  /** Estado ativo (azul) */
   active?: boolean
-  /** Estado ativo amarelo */
   activeYellow?: boolean
-  /** Estado ativo rosa */
   activePink?: boolean
-  /** Ícone outlined quando ativo */
   activeIconOutlined?: boolean
-  /** Texto do tooltip */
   tooltipText?: string
-  /** Posição do ícone */
   iconPosition?: 'left' | 'right' | 'top' | 'bottom'
-  /** Exibir dot de notificação */
   notificationDot?: boolean
 }
 
-// Props
-const props = withDefaults(defineProps<MeButtonProps>(), {
-  variant: ButtonVariant.BLUE,
-  iconPosition: 'left',
-  notificationDot: false
-})
+export default defineComponent({
+  name: 'MeButton',
 
-// Emits
-const emit = defineEmits<{
-  (e: 'click', event: MouseEvent): void
-}>()
+  props: {
+    label: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    icon: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    disabled: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    iconColor: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    borderColor: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    labelColor: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    variant: {
+      type: String as PropType<`${ButtonVariant}`>,
+      default: ButtonVariant.BLUE
+    },
+    outlined: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    flat: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    custom: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    active: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    activeYellow: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    activePink: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    activeIconOutlined: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    },
+    tooltipText: {
+      type: String as PropType<string>,
+      default: undefined
+    },
+    iconPosition: {
+      type: String as PropType<'left' | 'right' | 'top' | 'bottom'>,
+      default: 'left'
+    },
+    notificationDot: {
+      type: Boolean as PropType<boolean>,
+      default: false
+    }
+  },
 
-// Computed
-const buttonClasses = computed(() => ({
-  'default-style': !props.outlined && !props.flat && !props.custom,
-  'outlined-style': props.outlined && !props.custom,
-  'flat-style': props.flat && !props.custom,
-  'custom-style': props.custom,
-  'custom-active': props.active,
-  'active-blue-style': props.active,
-  'active-pink-style': props.activePink,
-  'active-yellow-style': props.activeYellow,
-  [props.variant]: true
-}))
+  emits: ['click'],
 
-const buttonStyles = computed(() => ({
-  'border-color': props.custom ? props.borderColor : undefined,
-  'color': props.custom ? props.labelColor : undefined
-}))
+  setup(props, { emit }) {
+    const buttonClasses = computed(() => ({
+      'default-style': !props.outlined && !props.flat && !props.custom,
+      'outlined-style': props.outlined && !props.custom,
+      'flat-style': props.flat && !props.custom,
+      'custom-style': props.custom,
+      'active-blue-style': props.active,
+      'active-pink-style': props.activePink,
+      'active-yellow-style': props.activeYellow,
+      [props.variant]: true
+    }))
 
-const showIcon = computed(() => {
-  return !!props.icon && !props.active && !props.activePink && !props.activeYellow && !props.custom
-})
+    const buttonStyles = computed(() => ({
+      'border-color': props.custom ? props.borderColor : undefined,
+      'color': props.custom ? props.labelColor : undefined
+    }))
 
-const showActiveIcon = computed(() => {
-  return !!props.icon && (props.active || props.activePink || props.activeYellow) && !props.activeIconOutlined
-})
+    const showIcon = computed(() => {
+      return !!props.icon && !props.active && !props.activePink && !props.activeYellow && !props.custom
+    })
 
-const showActiveIconOutlined = computed(() => {
-  return !!props.icon && (props.active || props.activePink || props.activeYellow) && props.activeIconOutlined
-})
+    const showActiveIcon = computed(() => {
+      return !!props.icon && (props.active || props.activePink || props.activeYellow) && !props.activeIconOutlined
+    })
 
-const showCustomIcon = computed(() => {
-  return !!props.icon && props.custom && !props.active && !props.activePink && !props.activeYellow
-})
+    const showActiveIconOutlined = computed(() => {
+      return !!props.icon && (props.active || props.activePink || props.activeYellow) && props.activeIconOutlined
+    })
 
-// Methods
-function handleClick(event: MouseEvent) {
-  if (!props.disabled) {
-    emit('click', event)
+    const showCustomIcon = computed(() => {
+      return !!props.icon && props.custom && !props.active && !props.activePink && !props.activeYellow
+    })
+
+    function handleClick(event: MouseEvent) {
+      if (!props.disabled) {
+        emit('click', event)
+      }
+    }
+
+    return {
+      buttonClasses,
+      buttonStyles,
+      showIcon,
+      showActiveIcon,
+      showActiveIconOutlined,
+      showCustomIcon,
+      handleClick
+    }
   }
-}
+})
 </script>
 
 <template>
@@ -128,8 +184,7 @@ function handleClick(event: MouseEvent) {
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/scss/imports/tokens' as *;
-@use '../../assets/scss/reset';
+@use '../../assets/scss/_tokens.scss' as *;
 
 @mixin standard-focus {
   border-color: $blue-primary !important;
@@ -241,29 +296,6 @@ function handleClick(event: MouseEvent) {
       background-color: $red-quinary;
       border-color: $red-quinary;
     }
-
-    &:focus-visible {
-      border-color: $ocean-primary;
-    }
-  }
-
-  &.orange {
-    background-color: $orange-primary;
-    border-color: $orange-primary;
-
-    &:hover:not(:disabled) {
-      background-color: $orange-secondary;
-      border-color: $orange-secondary;
-    }
-
-    &:disabled {
-      background-color: $orange-quinary;
-      border-color: $orange-quinary;
-    }
-
-    &:focus-visible {
-      border-color: $ocean-primary;
-    }
   }
 
   &.blue,
@@ -279,10 +311,6 @@ function handleClick(event: MouseEvent) {
     &:disabled {
       background-color: $blue-quaternary;
       border-color: $blue-quaternary;
-    }
-
-    &:focus-visible {
-      border-color: $ocean-primary;
     }
   }
 }
@@ -304,11 +332,6 @@ function handleClick(event: MouseEvent) {
     &:disabled {
       color: $neutral-default;
     }
-
-    &:focus-visible {
-      background-color: $neutral-dark;
-      color: $neutral-white;
-    }
   }
 
   &.red {
@@ -323,30 +346,6 @@ function handleClick(event: MouseEvent) {
     &:disabled {
       color: $red-quinary;
     }
-
-    &:focus-visible {
-      background-color: $red-primary;
-      color: $text-white;
-    }
-  }
-
-  &.orange {
-    color: $orange-secondary;
-
-    &:hover:not(:disabled) {
-      border-color: $orange-primary;
-      background-color: $orange-primary;
-      color: $text-white;
-    }
-
-    &:disabled {
-      color: $orange-quinary;
-    }
-
-    &:focus-visible {
-      background-color: $orange-secondary;
-      color: $text-white;
-    }
   }
 
   &.blue {
@@ -360,11 +359,6 @@ function handleClick(event: MouseEvent) {
 
     &:disabled {
       color: $blue-quaternary;
-    }
-
-    &:focus-visible {
-      background-color: $blue-secondary;
-      color: $text-white;
     }
   }
 }
@@ -396,18 +390,6 @@ function handleClick(event: MouseEvent) {
 
     &:disabled {
       color: $red-quinary;
-    }
-  }
-
-  &.orange {
-    color: $orange-secondary;
-
-    &:hover:not(:disabled) {
-      color: $orange-tertiary;
-    }
-
-    &:disabled {
-      color: $orange-quinary;
     }
   }
 
@@ -471,14 +453,6 @@ function handleClick(event: MouseEvent) {
 
   &:disabled {
     opacity: 0.5;
-  }
-
-  &:focus-visible {
-    @include standard-focus;
-
-    .base-btn-icon-custom {
-      color: $neutral-white !important;
-    }
   }
 }
 </style>

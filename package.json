@@ -2,7 +2,7 @@
   "name": "design-system-poc",
   "private": true,
   "workspaces": [
-    "packages/*",
+    "packages/ui-vue3",
     "apps/*"
   ],
   "scripts": {

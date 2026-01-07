@@ -1,10 +1,5 @@
 //** DESIGN SYSTEM COLORS **//
-// CSS Variables are defined in src/style.css (global)
-// These SCSS variables reference the CSS custom properties
 
-// ============================================
-// SASS VARIABLES
-// ============================================
 $neutral-white: var(--neutral-white);
 $neutral-pure: var(--neutral-pure);
 $neutral-soft: var(--neutral-soft);
@@ -15,7 +10,6 @@ $neutral-deep: var(--neutral-deep);
 $neutral-dark: var(--neutral-dark);
 $neutral-darkest: var(--neutral-darkest);
 
-/* BLUE COLORS */
 $blue-primary: var(--blue-primary);
 $blue-secondary: var(--blue-secondary);
 $blue-tertiary: var(--blue-tertiary);
@@ -23,7 +17,6 @@ $blue-quaternary: var(--blue-quaternary);
 $blue-quinary: var(--blue-quinary);
 $blue-senary: var(--blue-senary);
 
-/* OCEAN COLORS */
 $ocean-primary: var(--ocean-primary);
 $ocean-secondary: var(--ocean-secondary);
 $ocean-tertiary: var(--ocean-tertiary);
@@ -31,15 +24,6 @@ $ocean-quaternary: var(--ocean-quaternary);
 $ocean-quinary: var(--ocean-quinary);
 $ocean-senary: var(--ocean-senary);
 
-/* BEIGE COLORS */
-$beige-primary: var(--beige-primary);
-$beige-secondary: var(--beige-secondary);
-$beige-tertiary: var(--beige-tertiary);
-$beige-quaternary: var(--beige-quaternary);
-$beige-quinary: var(--beige-quinary);
-$beige-senary: var(--beige-senary);
-
-/* RED COLORS */
 $red-primary: var(--red-primary);
 $red-secondary: var(--red-secondary);
 $red-tertiary: var(--red-tertiary);
@@ -47,7 +31,6 @@ $red-quaternary: var(--red-quaternary);
 $red-quinary: var(--red-quinary);
 $red-senary: var(--red-senary);
 
-/* ORANGE COLORS */
 $orange-primary: var(--orange-primary);
 $orange-secondary: var(--orange-secondary);
 $orange-tertiary: var(--orange-tertiary);
@@ -55,7 +38,6 @@ $orange-quaternary: var(--orange-quaternary);
 $orange-quinary: var(--orange-quinary);
 $orange-senary: var(--orange-senary);
 
-/* GREEN COLORS */
 $green-primary: var(--green-primary);
 $green-secondary: var(--green-secondary);
 $green-tertiary: var(--green-tertiary);
@@ -63,15 +45,6 @@ $green-quaternary: var(--green-quaternary);
 $green-quinary: var(--green-quinary);
 $green-senary: var(--green-senary);
 
-/* YELLOW COLORS */
-$yellow-primary: var(--yellow-primary);
-$yellow-secondary: var(--yellow-secondary);
-$yellow-tertiary: var(--yellow-tertiary);
-$yellow-quaternary: var(--yellow-quaternary);
-$yellow-quinary: var(--yellow-quinary);
-$yellow-senary: var(--yellow-senary);
-
-/* PINK COLORS */
 $pink-primary: var(--pink-primary);
 $pink-secondary: var(--pink-secondary);
 $pink-tertiary: var(--pink-tertiary);
@@ -79,15 +52,6 @@ $pink-quaternary: var(--pink-quaternary);
 $pink-quinary: var(--pink-quinary);
 $pink-senary: var(--pink-senary);
 
-/* PURPLE COLORS */
-$purple-primary: var(--purple-primary);
-$purple-secondary: var(--purple-secondary);
-$purple-tertiary: var(--purple-tertiary);
-$purple-quaternary: var(--purple-quaternary);
-$purple-quinary: var(--purple-quinary);
-$purple-senary: var(--purple-senary);
-
-/* MUSTARD COLORS */
 $mustard-primary: var(--mustard-primary);
 $mustard-secondary: var(--mustard-secondary);
 $mustard-tertiary: var(--mustard-tertiary);
@@ -95,18 +59,7 @@ $mustard-quaternary: var(--mustard-quaternary);
 $mustard-quinary: var(--mustard-quinary);
 $mustard-senary: var(--mustard-senary);
 
-/* BACKGROUND COLORS */
-$bg-primary: var(--bg-primary);
-$bg-secondary: var(--bg-secondary);
-$bg-tertiary: var(--bg-tertiary);
-$bg-quaternary: var(--bg-quaternary);
-
-/* TEXT COLORS */
 $text-primary: var(--text-primary);
 $text-secondary: var(--text-secondary);
 $text-tertiary: var(--text-tertiary);
-$text-disable: var(--text-disable);
 $text-white: var(--text-white);
-
-
-

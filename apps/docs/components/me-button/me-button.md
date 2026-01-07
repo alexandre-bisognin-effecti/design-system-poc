@@ -10,7 +10,24 @@ Componente de botão altamente customizável para ações e navegação.
 
 ## Demo
 <div class="demo">
-  <MeButton>Click me</MeButton>
+  <MeButton size="small">Click me</MeButton>
+
+   <MeButton
+    :label="'Clique aqui'"
+    :icon-position="'left'"
+    :variant="'blue'"
+    :outlined="false"
+    :flat="false"
+    :custom="false"
+    :active="false"
+    :active-pink="false"
+    :active-yellow="false"
+    :active-icon-outlined="false"
+    :disabled="false"
+    :notification-dot="false"
+  >
+    Clique aqui
+  </MeButton>
 </div>
 
 ## Importação
